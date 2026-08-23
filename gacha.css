@@ -5,7 +5,18 @@ body {
   padding-top: 50px;
 }
 
-/* ガチャ画像のサイズ調整（大きすぎないようにする） */
+/* ①「装備ガチャ」などの文字を黒枠で囲んで角を丸くする設定 */
+h1 {
+  display: inline-block; /* 文字の長さに合わせた枠にするため */
+  background-color: #34495e; /* 枠の中の背景色（お好みで変更OK） */
+  color: #ffffff;
+  border: 3px solid #000000; /* 黒い太めの枠線 */
+  border-radius: 12px; /* 角を丸くする */
+  padding: 10px 25px; /* 枠の内側の余白 */
+  margin-bottom: 20px;
+}
+
+/* ガチャ画像のサイズ調整 */
 .gacha-img {
   width: 250px;
   max-width: 100%;
@@ -23,15 +34,15 @@ button {
   border-radius: 5px;
   cursor: pointer;
   
-  /* ↓ ボタンが滑らかに動くための設定 */
+  /* ボタンが滑らかに動くための設定 */
   transition: transform 0.1s, box-shadow 0.1s;
   box-shadow: 0 6px 0 #c0392b; /* ボタンの下側に立体的な影をつける */
 }
 
-/* ↓ ボタンを「押した瞬間」に少し沈んで浮き出るような演出 */
+/* ボタンを「押した瞬間」に少し沈む演出 */
 button:active {
-  transform: translateY(4px); /* 下に4ピクセル沈む */
-  box-shadow: 0 2px 0 #c0392b; /* 影を小さくして押した感を出す */
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #c0392b;
 }
 
 #result-area {
