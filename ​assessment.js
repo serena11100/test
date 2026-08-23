@@ -1,4 +1,33 @@
 'use strict';
+const userNameInput = document.getElementById('user-name');
+const assessmentButton = document.getElementById('assessment');
+const resultDivision = document.getElementById('result-area');
+const tweetDivision = document.getElementById('tweet-area');
+
+assessmentButton.addEventListener(
+  'click',
+  () => {
+    const userName = userNameInput.value;
+    if (userName.length === 0) {
+      // 名前が空の時は処理を終了する
+      return;
+    }
+
+    // 診断結果表示エリアの作成
+    resultDivision.innerText = '';
+    const heading = document.createElement('h3');
+    heading.innerText = '診断結果';
+    resultDivision.appendChild(heading);
+
+    const paragraph = document.createElement('p');
+    const result = assessment(userName);
+    paragraph.innerText = result;
+    resultDivision.appendChild(paragraph);
+
+    // TODO ツイートエリアの作成
+  }
+);
+
 const answers = [
   '###userName###のいいところは声です。###userName###の特徴的な声は皆を惹きつけ、心に残ります。',
   '###userName###のいいところはまなざしです。###userName###に見つめられた人は、気になって仕方がないでしょう。',
@@ -67,7 +96,28 @@ function test() {
   );
 
   console.log('診断結果の文章のテスト終了');
+
+  console.log('同じ名前なら、同じ結果を出力することのテスト');
+
+  console.log('太郎');
+  console.assert(
+    assessment('太郎') === assessment('太郎'),
+    '入力が同じ名前なら同じ診断結果を出力する処理が正しくありません。'
+  );
+
+  console.log('次郎');
+  console.assert(
+    assessment('次郎') === assessment('次郎'),
+    '入力が同じ名前なら同じ診断結果を出力する処理が正しくありません。'
+  );
+
+  console.log('花子');
+  console.assert(
+    assessment('花子') === assessment('花子'),
+    '入力が同じ名前なら同じ診断結果を出力する処理が正しくありません。'
+  );
+
+  console.log('同じ名前なら、同じ結果を出力することのテスト終了');
 }
 
 test();
-
