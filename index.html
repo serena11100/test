@@ -8,13 +8,19 @@
   <body>
     <h1>装備ガチャ</h1>
 
-    <!-- ↓ ここに用意した画像のファイル名を入れてね ↓ -->
+    <!-- ガチャの看板画像など（最初から出しておく画像） -->
     <div class="image-container">
-      <img src="gacha.png" alt="ガチャ画像" class="gacha-img">
+      <img src="gacha-image.png" alt="ガチャ画像" class="gacha-img">
     </div>
 
     <button id="gacha-button">ガチャを回す！</button>
+
+    <!-- ↓ 【追加】ここに当たった装備の画像がパッと表示されます！ -->
+    <div id="image-area"></div>
+
+    <!-- 診断結果の文字が出る場所 -->
     <div id="result-area"></div>
+
     <script src="gacha.js"></script>
   </body>
 </html>
