@@ -1,5 +1,5 @@
 'use strict';
-// HTMLのボタンと結果・画像エリアを取得する
+
 const button = document.getElementById('gacha-button');
 const resultArea = document.getElementById('result-area');
 const imageArea = document.getElementById('image-area');
@@ -7,7 +7,7 @@ const imageArea = document.getElementById('image-area');
 button.addEventListener('click', () => {
   const randomNum = Math.floor(Math.random() * 100);
   let resultText = '';
-  let imageFileName = ''; // 装備の画像ファイル名を入れる変数
+  let imageFileName = '';
 
  if (randomNum < 5) {
     resultText = '【SSR】強そうな剣';
