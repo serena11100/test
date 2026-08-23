@@ -11,7 +11,7 @@ button.addEventListener('click', () => {
     imageFileName = 'magic-shield.png'; // SR用の画像
   } else if (randomNum < 50) {
     resultText = '【R】鉄の鎧';
-    imageFileName = 'iron-armor.png'; // R用の画像
+    imageFileName = 'armor_platearmor.png'; // R用の画像
   } else {
     resultText = '【N】やくそう';
     imageFileName = 'herb.png'; // N用の画像
