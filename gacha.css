@@ -50,3 +50,11 @@ button:active {
   font-size: 24px;
   font-weight: bold;
 }
+
+/* ボタンを押したあとに出る装備画像の調整 */
+.result-img {
+  margin-top: 25px;   /* ← 上のボタンとの距離（ここを大きくすると下に下がります） */
+  margin-bottom: 15px; /* 下の文字との距離 */
+  border-radius: 8px;  /* お好みで画像の角を丸くする */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* 立体的な影をつける */
+}
