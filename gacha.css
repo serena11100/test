@@ -5,7 +5,7 @@ body {
   padding-top: 50px;
 }
 
-/* 文字を黒枠で囲んで角を丸くする設定 */
+ //文字を黒枠で囲んで角を丸くする設定
 h1 {
   display: inline-block; /* 文字の長さに合わせた枠にする */
   background-color: #34495e; /* 枠の中の背景色 */
