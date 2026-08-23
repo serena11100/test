@@ -1,23 +1,26 @@
-'use strict';
-const button = document.getElementById('gacha-button');
-const resultArea = document.getElementById('result-area');
-
 button.addEventListener('click', () => {
-  // 0〜99のランダムな数字を生成
   const randomNum = Math.floor(Math.random() * 100);
-  let result = '';
+  let resultText = '';
+  let imageFileName = ''; // 画像の名前を入れる変数
 
-  // 確率の振り分け（数字の範囲でレア度を決める）
   if (randomNum < 5) {
-    result = '【SSR】強そうな剣';
+    resultText = '【SSR】強そうな剣';
+    imageFileName = 'legendary-sword.png'; // SSR用の画像
   } else if (randomNum < 20) {
-    result = '【SR】ちょっと強い魔法の杖';
+    resultText = '【SR】ちょっと強そうな杖';
+    imageFileName = 'magic-shield.png'; // SR用の画像
   } else if (randomNum < 50) {
-    result = '【R】鉄の鎧';
+    resultText = '【R】鉄の鎧';
+    imageFileName = 'iron-armor.png'; // R用の画像
   } else {
-    result = '【N】やくそう';
+    resultText = '【N】やくそう';
+    imageFileName = 'herb.png'; // N用の画像
   }
 
-  // 結果を画面に表示
-  resultArea.innerText = result + ' が出ました！';
+  // テキストを画面に表示
+  resultArea.innerText = resultText + ' が出ました！';
+
+  // 画像を画面に表示（HTMLのimgタグをJSで動的に作る方法など）
+  const imageArea = document.getElementById('image-area');
+  imageArea.innerHTML = `<img src="${imageFileName}" alt="${resultText}" class="result-img">`;
 });
