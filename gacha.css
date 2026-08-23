@@ -5,10 +5,10 @@ body {
   padding-top: 50px;
 }
 
-/* ①「装備ガチャ」などの文字を黒枠で囲んで角を丸くする設定 */
+/* 文字を黒枠で囲んで角を丸くする設定 */
 h1 {
-  display: inline-block; /* 文字の長さに合わせた枠にするため */
-  background-color: #34495e; /* 枠の中の背景色（お好みで変更OK） */
+  display: inline-block; /* 文字の長さに合わせた枠にする */
+  background-color: #34495e; /* 枠の中の背景色 */
   color: #ffffff;
   border: 3px solid #000000; /* 黒い太めの枠線 */
   border-radius: 12px; /* 角を丸くする */
@@ -39,7 +39,7 @@ button {
   box-shadow: 0 6px 0 #c0392b; /* ボタンの下側に立体的な影をつける */
 }
 
-/* ボタンを「押した瞬間」に少し沈む演出 */
+/* ボタンを押した瞬間に少し沈む */
 button:active {
   transform: translateY(4px);
   box-shadow: 0 2px 0 #c0392b;
@@ -53,8 +53,8 @@ button:active {
 
 /* ボタンを押したあとに出る装備画像の調整 */
 .result-img {
-  margin-top: 30px;   /* ← 上のボタンとの距離（ここを大きくすると下に下がります） */
+  margin-top: 30px;   /* ← 上のボタンとの距離 */
   margin-bottom: 15px; /* 下の文字との距離 */
-  border-radius: 8px;  /* お好みで画像の角を丸くする */
+  border-radius: 8px;  /* 画像の角を丸くする */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* 立体的な影をつける */
 }
