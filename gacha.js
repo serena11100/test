@@ -14,7 +14,7 @@ button.addEventListener('click', () => {
     imageFileName = 'armor_platearmor.png'; // R用の画像
   } else {
     resultText = '【N】やくそう';
-    imageFileName = 'herb.png'; // N用の画像
+    imageFileName = 'yakuso_01.png'; // N用の画像
   }
 
   // テキストを画面に表示
