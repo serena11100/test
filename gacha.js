@@ -9,13 +9,13 @@ button.addEventListener('click', () => {
 
   // 確率の振り分け（数字の範囲でレア度を決める）
   if (randomNum < 5) {
-    result = '【SSR】強そうな剣（排出率5%）';
+    result = '【SSR】強そうな剣';
   } else if (randomNum < 20) {
-    result = '【SR】ちょっと強い魔法の杖（排出率15%）';
+    result = '【SR】ちょっと強い魔法の杖';
   } else if (randomNum < 50) {
-    result = '【R】鉄の鎧（排出率30%）';
+    result = '【R】鉄の鎧';
   } else {
-    result = '【N】やくそう（排出率50%）';
+    result = '【N】やくそう';
   }
 
   // 結果を画面に表示
