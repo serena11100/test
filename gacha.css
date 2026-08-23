@@ -1,9 +1,15 @@
 body {
-  background-color: #2c3e50;
+  background-image: url('background.jpg'); 
+  background-size: cover;          /* 画面いっぱいに画像を自動拡大・縮小する */
+  background-position: center;     /* 画像の中央を基準に表示する */
+  background-repeat: no-repeat;    /* 画像が勝手にタイル状に繰り返されるのを防ぐ */
+  background-attachment: fixed;    /* 画面をスクロールしても背景を固定する */
+  
   color: #ecf0f1;
   text-align: center;
   padding-top: 50px;
 }
+
 
 /* 文字を黒枠で囲んで角を丸くする設定 */
 h1 {
