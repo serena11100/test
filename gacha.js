@@ -1,9 +1,15 @@
+'use strict';
+// HTMLのボタンと結果・画像エリアを取得する
+const button = document.getElementById('gacha-button');
+const resultArea = document.getElementById('result-area');
+const imageArea = document.getElementById('image-area');
+
 button.addEventListener('click', () => {
   const randomNum = Math.floor(Math.random() * 100);
   let resultText = '';
-  let imageFileName = ''; // 画像の名前を入れる変数
+  let imageFileName = ''; // 装備の画像ファイル名を入れる変数
 
-  if (randomNum < 5) {
+ if (randomNum < 5) {
     resultText = '【SSR】強そうな剣';
     imageFileName = 'ken.png'; // SSR用の画像
   } else if (randomNum < 20) {
@@ -20,7 +26,6 @@ button.addEventListener('click', () => {
   // テキストを画面に表示
   resultArea.innerText = resultText + ' が出ました！';
 
-  // 画像を画面に表示（HTMLのimgタグをJSで動的に作る方法など）
-  const imageArea = document.getElementById('image-area');
-  imageArea.innerHTML = `<img src="${imageFileName}" alt="${resultText}" class="result-img">`;
+  // 当たった装備の画像を画面に表示
+  imageArea.innerHTML = `<img src="${imageFileName}" alt="${resultText}" class="result-img" width="150">`;
 });
